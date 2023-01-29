@@ -31,6 +31,8 @@ export default class CarouselExtendExtendExtend extends CarouselExtendExtend {
       this.images[this.current].classList.add('d-none');
       this.current = (this.current + 1) % this.images.length;
       this.images[this.current].classList.remove('d-none');
+      this.dots[(this.current + this.images.length) % 7].style.backgroundColor = 'grey';
+      this.dots[(this.current - 1 + this.images.length) % 7].style.backgroundColor = 'aliceblue';
     }, 3000);
   }
 
