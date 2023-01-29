@@ -46,7 +46,6 @@ export default class CarouselExtendExtendExtend extends CarouselExtendExtend {
   }
 
   fullScreen() {
-    console.log('full screen');
     this.carouselLast.classList.toggle('fullscreen');
   }
 }

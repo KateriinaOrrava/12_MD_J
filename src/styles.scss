@@ -113,12 +113,15 @@ button {
 }
 .fullscreen {
     position: fixed;
-    top: 2%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 90%;
+    height: 100%;
     background-color: black;
+    zoom: 200%;
   }
-
+  .js-fulscreen-btn{
+    align-self: flex-start;
+}
  
