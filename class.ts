@@ -37,5 +37,6 @@ export default class Carousel {
     this.images[this.current].classList.add('d-none');
     this.current = (this.current + 1) % this.images.length;
     this.images[this.current].classList.remove('d-none');
+    this.images[this.current].classList.add('show');
   }
 }
