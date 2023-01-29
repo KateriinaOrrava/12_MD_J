@@ -28,11 +28,10 @@ export default class CarouselExtendExtendExtend extends CarouselExtendExtend {
 
   start() {
     this.timer = setInterval(() => {
-      this.images[this.current].classList.add('d-none');
-      this.current = (this.current + 1) % this.images.length;
-      this.images[this.current].classList.remove('d-none');
-      this.dots[(this.current + this.images.length) % 7].style.backgroundColor = 'grey';
-      this.dots[(this.current - 1 + this.images.length) % 7].style.backgroundColor = 'aliceblue';
+      this.slideShow();
+      this.changeDotsColorPrevious();
+      this.changeDotsColorNext();
+      this.setSmallImageOrder();
     }, 3000);
   }
 
@@ -40,8 +39,14 @@ export default class CarouselExtendExtendExtend extends CarouselExtendExtend {
     clearInterval(this.timer);
   }
 
+  slideShow() {
+    this.images[this.current].classList.add('d-none');
+    this.current = (this.current + 1) % this.images.length;
+    this.images[this.current].classList.remove('d-none');
+  }
+
   fullScreen() {
     console.log('full screen');
-    this.carouselLast.classList.add('fullscreen');
+    this.carouselLast.classList.toggle('fullscreen');
   }
 }
