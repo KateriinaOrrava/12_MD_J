@@ -11,7 +11,7 @@ export default class CarouselExtendExtendExtend extends CarouselExtendExtend {
 
   currentLast = 0;
 
-  timer: any;
+  timer: NodeJS.Timer;
 
   constructor(selector:string) {
     super(selector);
